@@ -45,7 +45,7 @@ void setup()
   }
   Serial.println(" CONNECTED");
   
-  configTime(0, 0, pool.ntp.org);
+  configTime(0, 0, "pool.ntp.org");
   getLocalTime(&timeinfo);
 
   rtc.adjust(DateTime(mktime(&timeinfo)+UTCOffset*3600));
